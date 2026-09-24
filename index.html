@@ -2033,19 +2033,26 @@
             <div class="contact-form-wrap">
               <p class="form-intro">ご興味のある内容を入力いただくことで、折り返しのご案内に必要な情報をまとめて受け取れる構成です。</p>
               <p class="embed-note">送信いただいた内容は<strong>プライバシーポリシー</strong>に従って適切に管理いたします。</p>
-              <form class="contact-form" action="thanks.html" method="get">
+              <form class="contact-form" action="https://formsubmit.co/taichi-yamaguchi@funaisoken.co.jp" method="POST">
+                  <input type="hidden" name="_subject" value="【株式会社大島商会】「かえせ〜る」相談フォームからお問い合わせ">
+                  <input type="hidden" name="_template" value="table">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="text" name="_honey" value="" style="display:none;" aria-hidden="true" tabindex="-1" autocomplete="off">
+                  <!-- 本番アップロード後、下の2行のコメントを外し、valueを実際の公開URLに書き換えると送信後にサンクスページへ遷移します
+                  <input type="hidden" name="_next" value="https://www.ap-oshima.jp/kaeseru/thanks.html">
+                  -->
                 <div class="form-grid">
                   <div class="form-group">
                     <label for="name">お名前<span class="required">必須</span></label>
-                    <input id="name" name="name" type="text" placeholder="例）大島 花子" required>
+                    <input id="name" name="お名前" type="text" placeholder="例）大島 花子" required>
                   </div>
                   <div class="form-group">
                     <label for="kana">ふりがな</label>
-                    <input id="kana" name="kana" type="text" placeholder="例）おおしま はなこ">
+                    <input id="kana" name="ふりがな" type="text" placeholder="例）おおしま はなこ">
                   </div>
                   <div class="form-group">
                     <label for="phone">電話番号<span class="required">必須</span></label>
-                    <input id="phone" name="phone" type="tel" placeholder="例）090-1234-5678" required>
+                    <input id="phone" name="電話番号" type="tel" placeholder="例）090-1234-5678" required>
                   </div>
                   <div class="form-group">
                     <label for="email">メールアドレス<span class="required">必須</span></label>
@@ -2053,7 +2060,7 @@
                   </div>
                   <div class="form-group">
                     <label for="age">ご年齢</label>
-                    <select id="age" name="age">
+                    <select id="age" name="ご年齢">
                       <option value="">選択してください</option>
                       <option>65〜69歳</option>
                       <option>70〜74歳</option>
@@ -2063,7 +2070,7 @@
                   </div>
                   <div class="form-group">
                     <label for="contact_type">ご相談内容<span class="required">必須</span></label>
-                    <select id="contact_type" name="contact_type" required>
+                    <select id="contact_type" name="ご相談内容" required>
                       <option value="">選択してください</option>
                       <option>かえせ〜るの対象条件を知りたい</option>
                       <option>月々の支払いイメージを知りたい</option>
@@ -2074,7 +2081,7 @@
                   </div>
                   <div class="form-group">
                     <label for="contact_method">ご希望の連絡方法</label>
-                    <select id="contact_method" name="contact_method">
+                    <select id="contact_method" name="ご希望の連絡方法">
                       <option value="">選択してください</option>
                       <option>電話</option>
                       <option>メール</option>
@@ -2083,20 +2090,20 @@
                   </div>
                   <div class="form-group">
                     <label for="timing">ご都合の良い時間帯</label>
-                    <input id="timing" name="timing" type="text" placeholder="例）平日午前 / 土曜午後 など">
+                    <input id="timing" name="ご都合の良い時間帯" type="text" placeholder="例）平日午前 / 土曜午後 など">
                   </div>
                   <div class="form-group full">
                     <label for="car_interest">気になっている車種・ご希望</label>
-                    <input id="car_interest" name="car_interest" type="text" placeholder="例）軽自動車希望 / 乗り降りしやすい車種を知りたい">
+                    <input id="car_interest" name="気になっている車種・ご希望" type="text" placeholder="例）軽自動車希望 / 乗り降りしやすい車種を知りたい">
                   </div>
                   <div class="form-group full">
                     <label for="message">ご相談内容の詳細<span class="required">必須</span></label>
-                    <textarea id="message" name="message" placeholder="現在のお車の状況、ご検討時期、ご不安な点などをご記入ください。" required></textarea>
+                    <textarea id="message" name="ご相談内容の詳細" placeholder="現在のお車の状況、ご検討時期、ご不安な点などをご記入ください。" required></textarea>
                     <p class="field-help">例）自分が対象になるかを知りたい、免許返納後の流れも含めて相談したい など</p>
                   </div>
                   <div class="form-group full">
                     <div class="checkbox-card">
-                      <input id="privacy" name="privacy" type="checkbox" required>
+                      <input id="privacy" name="個人情報の取り扱いへの同意" type="checkbox" value="同意する" required>
                 <label class="checkbox-row" for="privacy">個人情報の取り扱いに同意します。（<a href="https://www.ap-oshima.jp/policy/" target="_blank" rel="noopener noreferrer" style="color:var(--brand-deep); text-decoration: underline; font-weight: 900;">プライバシーポリシーを見る</a>）</label>
                     </div>
                   </div>
@@ -2131,6 +2138,36 @@
     </div>
   </footer>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
